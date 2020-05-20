@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "iconfinder_social__media__social_media__android__3259398.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "iconfinder_social__media__social_media__android__3259398 (1).png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "iconfinder_social__media__social_media__android__3259398 (2).png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
