@@ -10,4 +10,5 @@ import Foundation
 
 class Constant {
     static let employeeCustomCellIdentifier = "EmployeeCustomCell"
+    static let projectCellIdentifier = "projectCellIdentifier"
 }

@@ -20,6 +20,7 @@
 		F911463C2473D5CE00E26A23 /* D_TransformUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911463B2473D5CE00E26A23 /* D_TransformUITests.swift */; };
 		F911464C2475069C00E26A23 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911464B2475069C00E26A23 /* EmployeeCell.swift */; };
 		F911464F24751E7100E26A23 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911464E24751E7100E26A23 /* Constant.swift */; };
+		F911465424753F5500E26A23 /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911465324753F5500E26A23 /* ProjectListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		F911463D2473D5CE00E26A23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F911464B2475069C00E26A23 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 		F911464E24751E7100E26A23 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		F911465324753F5500E26A23 /* ProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		F91146182473D5C800E26A23 /* D-Transform */ = {
 			isa = PBXGroup;
 			children = (
+				F911465224753F2B00E26A23 /* Projects */,
 				F9114651247526C800E26A23 /* Add Employee */,
 				F9114649247502EF00E26A23 /* Employee List */,
 				F911461F2473D5C800E26A23 /* Main.storyboard */,
@@ -212,6 +215,14 @@
 			children = (
 			);
 			path = "Add Employee";
+			sourceTree = "<group>";
+		};
+		F911465224753F2B00E26A23 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				F911465324753F5500E26A23 /* ProjectListViewController.swift */,
+			);
+			path = Projects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +466,7 @@
 			files = (
 				F911461E2473D5C800E26A23 /* EmployeeListViewController.swift in Sources */,
 				F911464C2475069C00E26A23 /* EmployeeCell.swift in Sources */,
+				F911465424753F5500E26A23 /* ProjectListViewController.swift in Sources */,
 				F911464F24751E7100E26A23 /* Constant.swift in Sources */,
 				F911461A2473D5C800E26A23 /* AppDelegate.swift in Sources */,
 				F911461C2473D5C800E26A23 /* SceneDelegate.swift in Sources */,
