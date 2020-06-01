@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  D-Transform
+
+  Created by Rohit on 6/1/20.
+  Copyright © 2020 Rohit. All rights reserved.
+*/
+
+///Projects
+"PROJECT_LIST" = "Project List";
+"ADD_NEWPROJECT" = "Add New Project";
+"NO_PROJECTDATA" = "No Projects Available";
+"ADD_PROJECTERROR" = "Please enter proper project name";
+
+
+//
+
+
+//Button Titles
+"OkButton" = "Ok";
+
+"ErrorHeader" = "D-Transform POC";

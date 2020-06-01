@@ -21,6 +21,11 @@
 		F911464C2475069C00E26A23 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911464B2475069C00E26A23 /* EmployeeCell.swift */; };
 		F911464F24751E7100E26A23 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911464E24751E7100E26A23 /* Constant.swift */; };
 		F911465424753F5500E26A23 /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911465324753F5500E26A23 /* ProjectListViewController.swift */; };
+		F911465824755AA300E26A23 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911465724755AA300E26A23 /* AddProjectViewController.swift */; };
+		F911465C24755CD400E26A23 /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911465B24755CD400E26A23 /* Projects.swift */; };
+		F911465E247560A500E26A23 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911465D247560A500E26A23 /* ProjectViewModel.swift */; };
+		F9E91F052484BB880019F86B /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E91F042484BB880019F86B /* Validator.swift */; };
+		F9E91F072484C2F20019F86B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9E91F062484C2F20019F86B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		F911464B2475069C00E26A23 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 		F911464E24751E7100E26A23 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		F911465324753F5500E26A23 /* ProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
+		F911465724755AA300E26A23 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		F911465B24755CD400E26A23 /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
+		F911465D247560A500E26A23 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
+		F9E91F042484BB880019F86B /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		F9E91F062484C2F20019F86B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +206,9 @@
 		F911464D24751E3E00E26A23 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F9E91F042484BB880019F86B /* Validator.swift */,
 				F911464E24751E7100E26A23 /* Constant.swift */,
+				F9E91F062484C2F20019F86B /* Localizable.strings */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -220,9 +232,28 @@
 		F911465224753F2B00E26A23 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
-				F911465324753F5500E26A23 /* ProjectListViewController.swift */,
+				F911465A24755CB700E26A23 /* Model */,
+				F911465924755C9A00E26A23 /* View */,
 			);
 			path = Projects;
+			sourceTree = "<group>";
+		};
+		F911465924755C9A00E26A23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F911465324753F5500E26A23 /* ProjectListViewController.swift */,
+				F911465724755AA300E26A23 /* AddProjectViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F911465A24755CB700E26A23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F911465B24755CD400E26A23 /* Projects.swift */,
+				F911465D247560A500E26A23 /* ProjectViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F91146262473D5CE00E26A23 /* LaunchScreen.storyboard in Resources */,
+				F9E91F072484C2F20019F86B /* Localizable.strings in Resources */,
 				F91146232473D5CE00E26A23 /* Assets.xcassets in Resources */,
 				F91146212473D5C800E26A23 /* Main.storyboard in Resources */,
 			);
@@ -464,8 +496,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F911465824755AA300E26A23 /* AddProjectViewController.swift in Sources */,
+				F911465E247560A500E26A23 /* ProjectViewModel.swift in Sources */,
+				F9E91F052484BB880019F86B /* Validator.swift in Sources */,
 				F911461E2473D5C800E26A23 /* EmployeeListViewController.swift in Sources */,
 				F911464C2475069C00E26A23 /* EmployeeCell.swift in Sources */,
+				F911465C24755CD400E26A23 /* Projects.swift in Sources */,
 				F911465424753F5500E26A23 /* ProjectListViewController.swift in Sources */,
 				F911464F24751E7100E26A23 /* Constant.swift in Sources */,
 				F911461A2473D5C800E26A23 /* AppDelegate.swift in Sources */,

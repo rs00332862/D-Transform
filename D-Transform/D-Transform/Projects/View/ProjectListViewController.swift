@@ -10,26 +10,36 @@ import Foundation
 import UIKit
 
 class ProjectListViewController: UITableViewController {
+    
+    var projectViewModel = ProjectViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //performInitialSetup()
-        //self.tableView.reloadData()
-    
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.tableView.reloadData()
+          fetchProjectData()
+        self.title = NSLocalizedString("PROJECT_LIST", comment: "")
+    }
+    
+    func fetchProjectData() {
+        projectViewModel.getAllProject(){
+            self.tableView.reloadData()
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return projectViewModel.projectArray.count == 0 ? 1 : projectViewModel.projectArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constant.projectCellIdentifier, for: indexPath)
-        cell.textLabel?.text = "Project 1"
-        
+        if(projectViewModel.projectArray.count == 0) {
+            cell.textLabel?.text = NSLocalizedString("NO_PROJECTDATA", comment: "")
+        } else {
+            cell.textLabel?.text = projectViewModel.projectArray[indexPath.row].projectName
+        }
         return cell
     }
     
@@ -40,8 +50,11 @@ class ProjectListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
             // handle delete
-            //print("Delete method called")
-            
+            projectViewModel.deleteProjectName(projectID: projectViewModel.projectArray[indexPath.row].projectID){
+                DispatchQueue.main.async {
+                    self.fetchProjectData()
+                }
+            }
         }
     }
     

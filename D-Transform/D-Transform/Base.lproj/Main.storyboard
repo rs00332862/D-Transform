@@ -130,6 +130,21 @@
             </objects>
             <point key="canvasLocation" x="2900" y="-275.22321428571428"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Wbj-hy-0Bw">
+            <objects>
+                <viewController id="cN1-7T-uuX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qny-5d-Vq9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="x3L-mi-Gz3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cBS-Rs-ga9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3925" y="-263"/>
+        </scene>
         <!--Project List View Controller-->
         <scene sceneID="8WQ-zy-aHL">
             <objects>
@@ -154,12 +169,57 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="vep-6o-d9t">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="kMc-7v-QwJ"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="kMc-7v-QwJ">
+                            <connections>
+                                <segue destination="FdB-G1-1oV" kind="show" id="stx-ZD-EYK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNo-kb-hEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2899" y="473"/>
+        </scene>
+        <!--Add Project View Controller-->
+        <scene sceneID="i6w-Iq-oF7">
+            <objects>
+                <viewController id="FdB-G1-1oV" customClass="AddProjectViewController" customModule="D_Transform" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gb9-kv-rDv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAt-RW-Asz">
+                                <rect key="frame" x="129.5" y="248" width="155" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="FdB-G1-1oV" eventType="touchUpInside" id="uZl-z6-Nrv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pk5-eM-jeM">
+                                <rect key="frame" x="58" y="157" width="297" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Pk5-eM-jeM" firstAttribute="centerX" secondItem="fAt-RW-Asz" secondAttribute="centerX" id="1jh-RT-xsO"/>
+                            <constraint firstItem="fAt-RW-Asz" firstAttribute="leading" secondItem="4F6-DP-u2b" secondAttribute="leading" constant="129.5" id="2kJ-Du-Vva"/>
+                            <constraint firstItem="Pk5-eM-jeM" firstAttribute="top" secondItem="4F6-DP-u2b" secondAttribute="top" constant="69" id="9dC-Vp-pPS"/>
+                            <constraint firstItem="Pk5-eM-jeM" firstAttribute="centerX" secondItem="gb9-kv-rDv" secondAttribute="centerX" id="Eg1-9G-EUh"/>
+                            <constraint firstItem="Pk5-eM-jeM" firstAttribute="leading" secondItem="4F6-DP-u2b" secondAttribute="leading" constant="58" id="rqg-Ii-hN3"/>
+                            <constraint firstItem="fAt-RW-Asz" firstAttribute="top" secondItem="Pk5-eM-jeM" secondAttribute="bottom" constant="57" id="uKn-0g-gQN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4F6-DP-u2b"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6ek-BB-ZCz"/>
+                    <connections>
+                        <outlet property="projectNameTextField" destination="Pk5-eM-jeM" id="srH-vP-Xos"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3md-PQ-Fo1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3844.9275362318845" y="486.83035714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0wT-Rv-VpK">
@@ -167,6 +227,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="c2c-uL-IT9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oQd-x7-V9p">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
