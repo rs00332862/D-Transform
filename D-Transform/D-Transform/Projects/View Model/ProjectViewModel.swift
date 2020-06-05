@@ -44,6 +44,20 @@ class ProjectViewModel {
             realm.delete(realm.objects(Projects.self).filter(predicate).first!)
             completion()
         }
-        
     }
+    
+    func getAllProjectList() -> [Projects] {
+        let result = realm.objects(Projects.self)
+        projectArray = [Projects]()
+        for project in result {
+            projectArray.append(project)
+        }
+        return projectArray
+    }
+    
+    func getProjectFrom(projectName: String) -> Projects {
+        let result = realm.objects(Projects.self).filter("projectName = %@",projectName)
+        return result.first!
+    }
+    
 }

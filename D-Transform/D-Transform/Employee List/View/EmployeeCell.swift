@@ -18,6 +18,12 @@ class EmployeeCell: UITableViewCell {
     @IBOutlet weak var employeeProject: UILabel!
     @IBOutlet weak var employeeNumber: UILabel!
     
-    
+    func setUpCellData(employeeData: Employee) {
+        employeeDesignation.text = employeeData.employeeDesignation
+        employeeName.text = "\(employeeData.employeeName!) (\(employeeData.employeeBand!))" 
+        employeeCompetency.text = employeeData.employeeComptency
+        employeeProject.text = employeeData.employeeProject?.projectName
+        employeeNumber.text = employeeData.employeeNumber
+    }
     
 }

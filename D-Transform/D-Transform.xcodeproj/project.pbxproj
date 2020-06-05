@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		16F9F0AFD6BA5EF4B41EA426 /* Pods_D_Transform_D_TransformUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E2BD31C1A1159A32B4B7D2 /* Pods_D_Transform_D_TransformUITests.framework */; };
-		652742D929F29AECA9A615F6 /* Pods_D_Transform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38076BC428AB5F75E17B531 /* Pods_D_Transform.framework */; };
 		F302E2C381A8BF8515241A73 /* Pods_D_TransformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58756EA1094005C8A71CA12B /* Pods_D_TransformTests.framework */; };
 		F911461A2473D5C800E26A23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91146192473D5C800E26A23 /* AppDelegate.swift */; };
 		F911461C2473D5C800E26A23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911461B2473D5C800E26A23 /* SceneDelegate.swift */; };
@@ -26,6 +25,12 @@
 		F911465E247560A500E26A23 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911465D247560A500E26A23 /* ProjectViewModel.swift */; };
 		F9E91F052484BB880019F86B /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E91F042484BB880019F86B /* Validator.swift */; };
 		F9E91F072484C2F20019F86B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9E91F062484C2F20019F86B /* Localizable.strings */; };
+		F9E91F0B24853EE30019F86B /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E91F0A24853EE30019F86B /* AddEmployeeViewController.swift */; };
+		F9E91F0D2485409C0019F86B /* AddEmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E91F0C2485409C0019F86B /* AddEmployeeViewModel.swift */; };
+		F9E91F1624862DD60019F86B /* Pods_D_Transform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38076BC428AB5F75E17B531 /* Pods_D_Transform.framework */; };
+		F9E91F28248789C50019F86B /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E91F27248789C50019F86B /* Employee.swift */; };
+		F9E91F2E2487A63F0019F86B /* EmployeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E91F2D2487A63F0019F86B /* EmployeeListViewModel.swift */; };
+		F9FF4664248A1967002F9723 /* CompetencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF4663248A1967002F9723 /* CompetencyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +82,15 @@
 		F911465D247560A500E26A23 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		F9E91F042484BB880019F86B /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		F9E91F062484C2F20019F86B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F9E91F0A24853EE30019F86B /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
+		F9E91F0C2485409C0019F86B /* AddEmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewModel.swift; sourceTree = "<group>"; };
+		F9E91F0E24862CF10019F86B /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E91F1224862D520019F86B /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E91F1424862DCD0019F86B /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E91F2124862E4A0019F86B /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E91F27248789C50019F86B /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		F9E91F2D2487A63F0019F86B /* EmployeeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModel.swift; sourceTree = "<group>"; };
+		F9FF4663248A1967002F9723 /* CompetencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetencyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				652742D929F29AECA9A615F6 /* Pods_D_Transform.framework in Frameworks */,
+				F9E91F1624862DD60019F86B /* Pods_D_Transform.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +137,10 @@
 		E139616B1A9968CEC8B96738 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9E91F2124862E4A0019F86B /* RealmSwift.framework */,
+				F9E91F1424862DCD0019F86B /* RealmSwift.framework */,
+				F9E91F1224862D520019F86B /* Realm.framework */,
+				F9E91F0E24862CF10019F86B /* Realm.framework */,
 				B38076BC428AB5F75E17B531 /* Pods_D_Transform.framework */,
 				B7E2BD31C1A1159A32B4B7D2 /* Pods_D_Transform_D_TransformUITests.framework */,
 				58756EA1094005C8A71CA12B /* Pods_D_TransformTests.framework */,
@@ -189,6 +207,8 @@
 		F9114649247502EF00E26A23 /* Employee List */ = {
 			isa = PBXGroup;
 			children = (
+				F9E91F2C2487A62A0019F86B /* View Model */,
+				F9E91F26248789AA0019F86B /* Model */,
 				F911464A2475031200E26A23 /* View */,
 			);
 			path = "Employee List";
@@ -225,6 +245,8 @@
 		F9114651247526C800E26A23 /* Add Employee */ = {
 			isa = PBXGroup;
 			children = (
+				F9E91F0924853EC40019F86B /* View Model */,
+				F9E91F0824853EB90019F86B /* View */,
 			);
 			path = "Add Employee";
 			sourceTree = "<group>";
@@ -232,6 +254,7 @@
 		F911465224753F2B00E26A23 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				F9E91F2B248796970019F86B /* View Model */,
 				F911465A24755CB700E26A23 /* Model */,
 				F911465924755C9A00E26A23 /* View */,
 			);
@@ -251,9 +274,49 @@
 			isa = PBXGroup;
 			children = (
 				F911465B24755CD400E26A23 /* Projects.swift */,
-				F911465D247560A500E26A23 /* ProjectViewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F9E91F0824853EB90019F86B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9E91F0A24853EE30019F86B /* AddEmployeeViewController.swift */,
+				F9FF4663248A1967002F9723 /* CompetencyTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9E91F0924853EC40019F86B /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9E91F0C2485409C0019F86B /* AddEmployeeViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		F9E91F26248789AA0019F86B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9E91F27248789C50019F86B /* Employee.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9E91F2B248796970019F86B /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				F911465D247560A500E26A23 /* ProjectViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		F9E91F2C2487A62A0019F86B /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9E91F2D2487A63F0019F86B /* EmployeeListViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,13 +561,18 @@
 			files = (
 				F911465824755AA300E26A23 /* AddProjectViewController.swift in Sources */,
 				F911465E247560A500E26A23 /* ProjectViewModel.swift in Sources */,
+				F9E91F0D2485409C0019F86B /* AddEmployeeViewModel.swift in Sources */,
 				F9E91F052484BB880019F86B /* Validator.swift in Sources */,
 				F911461E2473D5C800E26A23 /* EmployeeListViewController.swift in Sources */,
+				F9E91F0B24853EE30019F86B /* AddEmployeeViewController.swift in Sources */,
 				F911464C2475069C00E26A23 /* EmployeeCell.swift in Sources */,
 				F911465C24755CD400E26A23 /* Projects.swift in Sources */,
 				F911465424753F5500E26A23 /* ProjectListViewController.swift in Sources */,
+				F9FF4664248A1967002F9723 /* CompetencyTableViewCell.swift in Sources */,
+				F9E91F28248789C50019F86B /* Employee.swift in Sources */,
 				F911464F24751E7100E26A23 /* Constant.swift in Sources */,
 				F911461A2473D5C800E26A23 /* AppDelegate.swift in Sources */,
+				F9E91F2E2487A63F0019F86B /* EmployeeListViewModel.swift in Sources */,
 				F911461C2473D5C800E26A23 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +660,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: rohitshivankar@gmail.com (FXW3LGJMHH)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -652,6 +721,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: rohitshivankar@gmail.com (FXW3LGJMHH)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -679,7 +749,9 @@
 			baseConfigurationReference = 532ED42F13CD8E04226869CB /* Pods-D-Transform.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A42TM59L32;
 				INFOPLIST_FILE = "D-Transform/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -687,6 +759,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "TechMahindra.D-Transform";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -697,7 +770,9 @@
 			baseConfigurationReference = 70C0EF08E71B9883B3185A8F /* Pods-D-Transform.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A42TM59L32;
 				INFOPLIST_FILE = "D-Transform/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -705,6 +780,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "TechMahindra.D-Transform";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

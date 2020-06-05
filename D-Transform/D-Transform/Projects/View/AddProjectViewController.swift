@@ -26,14 +26,28 @@ class AddProjectViewController: UIViewController {
     }
     
     @IBAction func submitButtonPressed(_ sender: Any) {
-        let projectName = projectNameTextField.text!
-        if (projectName != "" && Validator.validateName(name: projectNameTextField.text!)) {
+        
+        if (validateProjectName()) {
             projectViewModel.saveProject(name: projectNameTextField.text!){
                 self.navigationController!.popToRootViewController(animated: true)
             }
-        }else {
-            self.displayErrorMessageWith(messageString: NSLocalizedString("ADD_PROJECTERROR", comment: ""))
         }
+    }
+    
+    func validateProjectName() -> Bool {
+        let projectName = projectNameTextField.text!
+        var returnFlag = true
+        do {
+            try Validator.validateName(name: projectName)
+        } catch Validator.InvalidNameError.errorMessage(message: let errorMSG) {
+            self.displayErrorMessageWith(messageString: errorMSG)
+            returnFlag = false
+        } catch {
+            self.displayErrorMessageWith(messageString: error.localizedDescription)
+            returnFlag = false
+        }
+        
+        return returnFlag
     }
     
     /// Method to dsiplay error messages on veiwcontroller
