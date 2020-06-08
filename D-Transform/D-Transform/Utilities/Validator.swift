@@ -40,7 +40,7 @@ class Validator {
         let validateName = NSPredicate(format: "SELF MATCHES %@", nameRegex)
         let isValidateName = validateName.evaluate(with: trimmedString)
         if (!isValidateName) {
-            throw InvalidNameError.errorMessage(message: "Invalid Employee number, Employee number should not contain whitespaces,  or special characters")
+            throw InvalidNameError.errorMessage(message: "Invalid Employee number, Employee number should only contains digits")
         }
     }
     

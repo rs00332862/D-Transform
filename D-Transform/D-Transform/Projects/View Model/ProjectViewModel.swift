@@ -17,7 +17,6 @@ class ProjectViewModel {
     func saveProject(name: String, completion: @escaping () -> ()) {
         let newProject = Projects()
         newProject.projectName = name
-        //newProject.projectID = String(getProjectListCount() + 1)
         try! realm.write {
             realm.add(newProject)
         }
