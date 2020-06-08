@@ -97,12 +97,6 @@ extension EmployeeListViewController: UITableViewDelegate,UITableViewDataSource 
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//       let addEmployeeView = AddEmployeeViewController()
-//        addEmployeeView.selectedEmployee = employeeListViewModel.getEmployeeData(indexPathRow: indexPath.row, isFiltrig: isFiltering)
-//        self.navigationController?.pushViewController(addEmployeeView, animated: true)
-//    }
-    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -112,7 +106,7 @@ extension EmployeeListViewController: UITableViewDelegate,UITableViewDataSource 
             // handle delete
             //print("Delete method called")
             employeeListViewModel.deleteEmployeeDataWith(indexPathRow: indexPath.row, isFiltrig: isFiltering) {
-                self.employeeTableView.reloadData()
+                self.getEmployeeDataFromViewModel()
             }
         }
     }
