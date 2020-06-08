@@ -62,7 +62,13 @@ class EmployeeListViewController: UIViewController {
         return searchController.isActive && !isSearchBarEmpty
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        if (segue.identifier == "EditEmployee"){
+            let destinationVC = segue.destination as! AddEmployeeViewController
+            destinationVC.selectedEmployee = employeeListViewModel.getEmployeeData(indexPathRow: self.employeeTableView.indexPathForSelectedRow!.row, isFiltrig: isFiltering)
+        }        
+    }
     
 }
 
@@ -76,6 +82,8 @@ extension EmployeeListViewController: UISearchResultsUpdating {
     }
 }
 
+//MARK: - UITable View Delegate & Datasource
+
 extension EmployeeListViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -85,9 +93,15 @@ extension EmployeeListViewController: UITableViewDelegate,UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constant.employeeCustomCellIdentifier) as! EmployeeCell
         cell.setUpCellData(employeeData: employeeListViewModel.getEmployeeData(indexPathRow: indexPath.row, isFiltrig: isFiltering))
-        cell.employeeImage.image = UIImage.init(named: "iOS")
+       
         return cell
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//       let addEmployeeView = AddEmployeeViewController()
+//        addEmployeeView.selectedEmployee = employeeListViewModel.getEmployeeData(indexPathRow: indexPath.row, isFiltrig: isFiltering)
+//        self.navigationController?.pushViewController(addEmployeeView, animated: true)
+//    }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -97,7 +111,9 @@ extension EmployeeListViewController: UITableViewDelegate,UITableViewDataSource 
         if (editingStyle == .delete) {
             // handle delete
             //print("Delete method called")
-            
+            employeeListViewModel.deleteEmployeeDataWith(indexPathRow: indexPath.row, isFiltrig: isFiltering) {
+                self.employeeTableView.reloadData()
+            }
         }
     }
 }

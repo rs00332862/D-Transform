@@ -56,6 +56,29 @@ class AddEmployeeViewModel {
         completion()
     }
     
+    func updateEmployeeData(employeeData: Employee, projectName: String, completion: @escaping () -> ()){
+        
+        let projectViewModel = ProjectViewModel()
+        let employeeProject = projectViewModel.getProjectFrom(projectName: projectName)
+        
+//        let employee = realm.object(ofType: Employee.self, forPrimaryKey: employeeData.employeeID) //  realm.objects(Employee.self).first(where: "employeeID = '\(employeeData.employeeID)")
+//            try! realm.write {
+//                employee!.employeeName = employeeData.employeeName
+//                employee!.employeeNumber = employeeData.employeeNumber
+//                employee!.employeeBand = employeeData.employeeBand
+//                employee!.employeeProject = employeeProject
+//                employee!.employeeComptency = employeeData.employeeComptency
+//                employee!.employeeDesignation = employeeData.employeeDesignation
+//            }
+        
+        
+        try! realm.write {
+            employeeData.employeeProject = employeeProject
+            realm.add(employeeData, update: .modified)
+        }
+        completion()
+    }
+    
 }
 
 enum EmployeeBand: String, CaseIterable {

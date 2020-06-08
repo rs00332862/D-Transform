@@ -25,6 +25,8 @@ class AddEmployeeViewController: UIViewController {
     @IBOutlet weak var employeeBandErrorLabel: UILabel!
     let employeeViewModel = AddEmployeeViewModel()
     @IBOutlet weak var employeeAddScrollView: UIScrollView!
+    var selectedEmployee: Employee? = Employee()
+    
     
     @IBOutlet weak var employeeCompTableView: UITableView!
     
@@ -44,7 +46,12 @@ class AddEmployeeViewController: UIViewController {
     func initiateView() {
         // Do any additional setup after loading the view.
         self.title = "Add Employee"
+
         employeeViewModel.setAllDataForView()
+        if((selectedEmployee) != nil){
+            self.title = "Edit Employee"
+            setupViewData()
+        }
         employeeAddScrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 650)
         let tempPickerView = UIPickerView()
         tempPickerView.dataSource = self
@@ -53,22 +60,42 @@ class AddEmployeeViewController: UIViewController {
         employeeBand.inputView = tempPickerView
         employeeProjectName.inputView = tempPickerView
         self.pickerView = tempPickerView
-       // employeeCompTableView.reloadData()
     }
     
+    func setupViewData() {
+        employeeName.text = selectedEmployee?.employeeName
+        employeeNumber.text = selectedEmployee?.employeeNumber
+        employeeDesignation.text = selectedEmployee?.employeeDesignation
+        selectedCompetency = Competency(rawValue: (selectedEmployee?.employeeComptency)!)!
+        employeeProjectName.text = selectedEmployee?.employeeProject?.projectName
+        employeeBand.text =  selectedEmployee?.employeeBand
+    }
     
     @IBAction func submitButtonPressed(_ sender: Any) {
         if(validateData()) {
-            let employeeData = Employee()
-            employeeData.employeeName = employeeName.text
-            employeeData.employeeNumber = employeeNumber.text
-            employeeData.employeeBand = employeeBand.text
-            employeeData.employeeDesignation = employeeDesignation.text
-            employeeData.employeeComptency = selectedCompetency.rawValue
-            
-            employeeViewModel.saveEmployeeData(employee: employeeData, projectName: employeeProjectName.text!) {
-                //self.displayErrorMessageWith(messageString: "Employee added successfully")
-                self.navigationController!.popToRootViewController(animated: true)
+            if(selectedEmployee != nil) {
+                let employeeData = Employee()
+                employeeData.employeeID = selectedEmployee?.employeeID as! String
+                employeeData.employeeName = employeeName.text
+                employeeData.employeeNumber = employeeNumber.text
+                employeeData.employeeBand = employeeBand.text
+                employeeData.employeeDesignation = employeeDesignation.text
+                employeeData.employeeComptency = selectedCompetency.rawValue
+                employeeViewModel.updateEmployeeData(employeeData: employeeData, projectName: employeeProjectName.text!, completion: {
+                    self.navigationController!.popToRootViewController(animated: true)
+                })
+            } else {
+                let employeeData = Employee()
+                employeeData.employeeName = employeeName.text
+                employeeData.employeeNumber = employeeNumber.text
+                employeeData.employeeBand = employeeBand.text
+                employeeData.employeeDesignation = employeeDesignation.text
+                employeeData.employeeComptency = selectedCompetency.rawValue
+                
+                employeeViewModel.saveEmployeeData(employee: employeeData, projectName: employeeProjectName.text!) {
+                    //self.displayErrorMessageWith(messageString: "Employee added successfully")
+                    self.navigationController!.popToRootViewController(animated: true)
+                }
             }
         }
     }

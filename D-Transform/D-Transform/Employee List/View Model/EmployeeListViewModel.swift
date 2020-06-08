@@ -45,4 +45,12 @@ class EmployeeListViewModel {
         }
         completion()
     }
+    
+    func deleteEmployeeDataWith(indexPathRow: Int, isFiltrig: Bool, completion: @escaping () -> ()) {
+        let employeeData = getEmployeeData(indexPathRow: indexPathRow, isFiltrig: isFiltrig)
+        let result = realm.objects(Employee.self).filter("employeeID = '\(employeeData.employeeID)")
+        try! realm.write {
+            realm.delete(result)
+        }
+    }
 }

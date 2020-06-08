@@ -107,6 +107,7 @@
                                             <outlet property="employeeName" destination="585-so-zFX" id="l3o-Mv-srn"/>
                                             <outlet property="employeeNumber" destination="RJy-yB-eRG" id="t41-Th-PpT"/>
                                             <outlet property="employeeProject" destination="bZe-ft-gb1" id="Zbh-KW-dkp"/>
+                                            <segue destination="cN1-7T-uuX" kind="show" identifier="EditEmployee" id="gzf-8J-9Fn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -427,6 +428,9 @@
             <point key="canvasLocation" x="2040.5797101449277" y="473.4375"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gzf-8J-9Fn"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Employee" width="32" height="32"/>
         <image name="Projects" width="32" height="32"/>

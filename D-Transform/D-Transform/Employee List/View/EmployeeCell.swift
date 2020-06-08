@@ -24,6 +24,7 @@ class EmployeeCell: UITableViewCell {
         employeeCompetency.text = employeeData.employeeComptency
         employeeProject.text = employeeData.employeeProject?.projectName
         employeeNumber.text = employeeData.employeeNumber
+        employeeImage.image = UIImage.init(named: employeeData.employeeComptency!)
     }
     
 }
