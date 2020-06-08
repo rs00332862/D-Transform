@@ -32,7 +32,7 @@ class Validator {
         if (number.trimmingCharacters(in: .whitespaces) == ""){
             throw InvalidNameError.errorMessage(message: "Invalid Employee number, Please provide value for text field.")
         }
-        if (number.count > 0 && number.count < 8){
+        if (number.count == 0 || number.count > 8){
             throw InvalidNameError.errorMessage(message: "Invalid Employee number, Employee number should have less than 8 digits")
         }
         let nameRegex = "^[0-9]*$"

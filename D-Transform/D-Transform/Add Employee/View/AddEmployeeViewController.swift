@@ -48,7 +48,7 @@ class AddEmployeeViewController: UIViewController {
         self.title = "Add Employee"
 
         employeeViewModel.setAllDataForView()
-        if((selectedEmployee) != nil){
+        if((selectedEmployee?.employeeName) != nil){
             self.title = "Edit Employee"
             setupViewData()
         }
